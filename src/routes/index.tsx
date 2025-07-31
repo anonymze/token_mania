@@ -5,7 +5,6 @@ import { ExploreIcon } from "@/assets/icons/explore";
 import { QuestionIcon } from "@/assets/icons/question";
 import { SearchIcon } from "@/assets/icons/search";
 import logoImage from "@/assets/images/logo.png";
-import logoTitleImage from "@/assets/images/logo_title_3.png";
 import profileImage from "@/assets/images/profile.png";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -50,210 +49,208 @@ function Home() {
   return (
     <div className="grid h-full grid-cols-6 grid-rows-16">
       {/* Sidebar */}
-      <aside className="border-r-gray-light col-span-1 row-span-full h-full border-r p-6">
-        <div>
-          <Link to="/" className="flex items-center gap-3">
-            <Image
-              src={logoImage}
-              layout="constrained"
-              width={60}
-              height={50}
-              alt="Logo Token Mania"
-              className="mx-auto"
-            />
-          </Link>
-        </div>
-        <nav className="">
-          <menu className="flex flex-col gap-1">
-            <li className="bg-background rounded-default text-xs font-medium text-white">
-              <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
-                <ExploreIcon className="size-5" />
-                Produits populaires
-              </Link>
-            </li>
-            <li className="text-foreground rounded-default text-xs font-medium">
-              <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
-                <ExploreIcon className="size-5" />
-                Nouveautés
-              </Link>
-            </li>
-            <li className="text-foreground rounded-default text-xs font-medium">
-              <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
-                <ExploreIcon className="size-5" />
-                Cadeaux
-              </Link>
-            </li>
-            <li className="text-foreground rounded-default text-xs font-medium">
-              <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
-                <ExploreIcon className="size-5" />
-                Inspiration
-              </Link>
-            </li>
-          </menu>
-        </nav>
-        <Separator className="my-6" />
-        <section aria-labelledby="quick-actions">
-          <h3
-            id="quick-actions"
-            className="text-gray mb-1.5 pl-5 text-xs font-medium"
-          >
-            Actions rapides
-          </h3>
-          <ul>
-            <li className="text-foreground rounded-default text-xs">
-              <Link
-                to="/"
-                className="hover:bg-background rounded-default flex items-center gap-2 px-5 py-2 hover:text-white"
-              >
-                <QuestionIcon className="size-4" />
-                Demander un produit
-              </Link>
-            </li>
-            <li className="text-foreground rounded-default text-xs">
-              <Link
-                to="/"
-                className="hover:bg-background rounded-default flex items-center gap-2 px-5 py-2 hover:text-white"
-              >
-                <QuestionIcon className="size-4" />
-                Demander un partenariat
-              </Link>
-            </li>
-          </ul>
-        </section>
-        <Separator className="my-6" />
-        <section aria-labelledby="last-orders">
-          <h3
-            id="last-orders"
-            className="text-gray mb-1.5 pl-5 text-xs font-medium"
-          >
-            Dernières commandes
-          </h3>
-          <ul>
-            <li className="text-foreground rounded-default text-xs">
-              <Link
-                to="/"
-                className="hover:bg-tertiary rounded-default flex items-center gap-2 px-5 py-2"
-              >
-                <Image
-                  src={logoImage}
-                  layout="constrained"
-                  width={25}
-                  height={25}
-                  alt=""
-                />
-                Token Cthulhu par 10000
-              </Link>
-            </li>
-            <li className="text-foreground rounded-default text-xs">
-              <Link
-                to="/"
-                className="hover:bg-tertiary rounded-default e flex items-center gap-2 px-5 py-2"
-              >
-                <Image
-                  src={logoImage}
-                  layout="constrained"
-                  width={25}
-                  height={25}
-                  alt=""
-                />
-                Token Cthulhu par 10000
-              </Link>
-            </li>
-          </ul>
-          <Link
-            to="/"
-            className="text-gray-dark mt-2 inline-block pl-5 text-xs font-medium hover:underline"
-          >
-            Voir tout
-          </Link>
-        </section>
-        <Link
-          to="/"
-          className="hover:bg-tertiary rounded-default mt-18 flex items-center gap-2 px-5 py-3 text-xs font-medium"
-        >
+      <aside className="border-r-gray-light col-span-1 row-span-full grid grid-rows-16 border-r p-6">
+        <Link to="/" className="row-span-2 flex items-center gap-3">
           <Image
             src={logoImage}
             layout="constrained"
-            width={25}
-            height={25}
-            alt=""
+            width={70}
+            height={70}
+            alt="Logo Token Mania"
+            className="mx-auto"
           />
-          Se déconnecter
         </Link>
+
+        <div className="row-span-14 flex flex-col">
+          <nav>
+            <menu className="flex flex-col gap-1">
+              <li className="bg-background rounded-default text-xs font-medium text-white">
+                <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
+                  <ExploreIcon className="size-5" />
+                  Produits populaires
+                </Link>
+              </li>
+              <li className="text-foreground rounded-default text-xs font-medium">
+                <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
+                  <ExploreIcon className="size-5" />
+                  Nouveautés
+                </Link>
+              </li>
+              <li className="text-foreground rounded-default text-xs font-medium">
+                <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
+                  <ExploreIcon className="size-5" />
+                  Cadeaux
+                </Link>
+              </li>
+              <li className="text-foreground rounded-default text-xs font-medium">
+                <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
+                  <ExploreIcon className="size-5" />
+                  Inspiration
+                </Link>
+              </li>
+            </menu>
+          </nav>
+          <Separator className="my-6" />
+          <section aria-labelledby="quick-actions">
+            <h3
+              id="quick-actions"
+              className="text-gray mb-1.5 pl-5 text-xs font-medium"
+            >
+              Actions rapides
+            </h3>
+            <ul>
+              <li className="text-foreground rounded-default group text-xs">
+                <Link to="/" className="flex items-center gap-2 px-5 py-1.5">
+                  <span className="group-hover:bg-background inline-block rounded p-1">
+                    <QuestionIcon className="size-4 group-hover:text-white" />
+                  </span>
+                  Demander un produit
+                </Link>
+              </li>
+              <li className="text-foreground rounded-default group text-xs">
+                <Link to="/" className="flex items-center gap-2 px-5 py-1.5">
+                  <span className="group-hover:bg-background inline-block rounded p-1">
+                    <QuestionIcon className="size-4 group-hover:text-white" />
+                  </span>
+                  Demander un partenariat
+                </Link>
+              </li>
+            </ul>
+          </section>
+          <Separator className="my-6" />
+          <section aria-labelledby="last-orders">
+            <h3
+              id="last-orders"
+              className="text-gray mb-1.5 pl-5 text-xs font-medium"
+            >
+              Dernières commandes
+            </h3>
+            <ul>
+              <li className="text-foreground rounded-default group text-xs">
+                <Link to="/" className="flex items-center gap-2 px-5 py-1.5">
+                  <span className="group-hover:bg-tertiary inline-block rounded p-1">
+                    <Image
+                      src={logoImage}
+                      layout="constrained"
+                      width={15}
+                      height={15}
+                      alt="Logo Token Mania"
+                      className="mx-auto"
+                    />
+                  </span>
+                  Demander un produit
+                </Link>
+              </li>
+              <li className="text-foreground rounded-default group text-xs">
+                <Link to="/" className="flex items-center gap-2 px-5 py-1.5">
+                  <span className="group-hover:bg-tertiary inline-block rounded p-1">
+                    <Image
+                      src={logoImage}
+                      layout="constrained"
+                      width={15}
+                      height={15}
+                      alt="Logo Token Mania"
+                      className="mx-auto"
+                    />
+                  </span>
+                  Demander un produit
+                </Link>
+              </li>
+            </ul>
+            <Link
+              to="/"
+              className="text-gray-dark mt-2 inline-block pl-5 text-xs font-medium hover:underline"
+            >
+              Voir tout
+            </Link>
+          </section>
+          <Link
+            to="/"
+            className="hover:bg-tertiary rounded-default mt-auto flex items-center gap-2 px-5 py-3 text-xs font-medium"
+          >
+            <Image
+              src={logoImage}
+              layout="constrained"
+              width={25}
+              height={25}
+              alt=""
+              className="mt-auto"
+            />
+            Se déconnecter
+          </Link>
+        </div>
       </aside>
 
       {/* Header */}
-      <header className="border-b-gray-light relative col-span-5 row-span-3 flex flex-col border-b p-6">
-        <div className="after:bg-background flex justify-between after:absolute after:-bottom-0.5 after:left-16 after:h-1 after:w-5 after:rounded-full after:content-['']">
-          <section
-            aria-labelledby="orders-heading"
-            className="flex h-fit items-center gap-2"
-          >
-            <data value="37" className="text-3xl font-medium">
-              37
-            </data>
-            <Separator
-              orientation="vertical"
-              className="data-[orientation=vertical]:h-3.5"
-            />
-            <div className="flex flex-col justify-center">
-              <h2
-                id="orders-heading"
-                className="text-xs leading-3.5 font-medium"
-              >
-                Commandes
-              </h2>
-              <time
-                dateTime="P1M"
-                className="text-muted-foreground text-xs leading-3.5"
-              >
-                Dernier mois
-              </time>
-            </div>
-          </section>
-
-          <Image
-            src={logoTitleImage}
-            layout="constrained"
-            width={90}
-            height={90}
-            alt="Logo titre Token Mania"
+      <header className="col-span-5 row-span-2 flex justify-between p-6">
+        <section
+          aria-labelledby="orders-heading"
+          className="flex h-fit items-center gap-2"
+        >
+          <data value="37" className="text-3xl font-medium">
+            37
+          </data>
+          <Separator
+            orientation="vertical"
+            className="data-[orientation=vertical]:h-3.5"
           />
+          <div className="flex flex-col justify-center">
+            <h2 id="orders-heading" className="text-xs leading-3.5 font-medium">
+              Commandes
+            </h2>
+            <time
+              dateTime="P1M"
+              className="text-muted-foreground text-xs leading-3.5"
+            >
+              Dernier mois
+            </time>
+          </div>
+        </section>
 
-          <section
-            aria-label="User actions"
-            className="flex h-fit items-center gap-4"
-          >
-            {/* Cart */}
-            <div className="relative">
-              <Link
-                to="/"
-                className="bg-gray-light text-foreground rounded-default hover:bg-tertiary flex items-center gap-1.5 px-4 py-4 text-xs"
-              >
-                <CartIcon />
-                Panier
-              </Link>
-              <div className="bg-background absolute top-0.5 right-0.5 size-2.5 animate-pulse rounded-full"></div>
-            </div>
+        {/*<Image
+          src={logoTitleImage}
+          layout="fixed"
+          width={100}
+          height={30}
+          alt="Logo titre Token Mania"
+        />*/}
 
-            {/* User Profile */}
-            <div className="hover:bg-tertiary rounded-default relative flex items-center gap-3 px-3 py-2">
-              <Link to="/" className="absolute inset-0 z-10"></Link>
-              <Image
-                src={profileImage}
-                layout="constrained"
-                width={30}
-                height={30}
-                alt="Logo website"
-              />
-              <div>
-                <p className="text-xs font-medium">Benjamin</p>
-                <p className="text-xs font-medium">Leproust</p>
-              </div>
+        <section
+          aria-label="User actions"
+          className="flex h-fit items-center gap-4"
+        >
+          {/* Cart */}
+          <div className="relative">
+            <Link
+              to="/"
+              className="bg-gray-light text-foreground rounded-default hover:bg-tertiary flex items-center gap-1.5 px-4 py-4 text-xs"
+            >
+              <CartIcon />
+              Panier
+            </Link>
+            <div className="bg-background absolute top-0.5 right-0.5 size-2.5 animate-pulse rounded-full"></div>
+          </div>
+
+          {/* User Profile */}
+          <div className="hover:bg-tertiary rounded-default relative flex items-center gap-3 px-3 py-2">
+            <Link to="/" className="absolute inset-0 z-10"></Link>
+            <Image
+              src={profileImage}
+              layout="constrained"
+              width={30}
+              height={30}
+              alt="Logo website"
+            />
+            <div>
+              <p className="text-xs font-medium">Benjamin</p>
+              <p className="text-xs font-medium">Leproust</p>
             </div>
-          </section>
-        </div>
-        <div className="flex flex-1 items-center justify-between">
+          </div>
+        </section>
+      </header>
+
+      <header className="border-b-gray-light after:bg-background relative col-span-5 row-span-2 border-b px-6 py-5 after:absolute after:-bottom-0.5 after:left-16 after:h-1 after:w-5 after:rounded-full after:content-['']">
+        <div className="flex items-center justify-between">
           <h3 className="text-2xl font-medium">Découvre</h3>
           <div className="flex gap-1.5">
             <Button className="text-foreground hover:bg-secondary bg-secondary flex items-center rounded-full">
@@ -281,7 +278,7 @@ function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="col-span-5 row-span-13 p-6"></main>
+      <main className="col-span-5 row-span-12 p-6"></main>
     </div>
   );
 }
