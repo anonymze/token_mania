@@ -1,5 +1,13 @@
 // src/routes/index.tsx
-import logoImage from "@/assets/images/logo_2.png";
+import { BuildingIcon } from "@/assets/icons/building";
+import { CartIcon } from "@/assets/icons/cart";
+import { ExploreIcon } from "@/assets/icons/explore";
+import { QuestionIcon } from "@/assets/icons/question";
+import { SearchIcon } from "@/assets/icons/search";
+import leaveImage from "@/assets/images/leave.png";
+import logoImage from "@/assets/images/logo.png";
+import logoTitleImage from "@/assets/images/logo_title.png";
+import profileImage from "@/assets/images/profile.png";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
@@ -43,9 +51,9 @@ function Home() {
   return (
     <div className="grid h-full grid-cols-6 grid-rows-16">
       {/* Sidebar */}
-      <aside className="border-border col-span-1 row-span-full h-full border-r p-6">
-        <div className="h-[var(--spacing-header-height)]">
-          <Link to="/" className="group flex items-center gap-3">
+      <aside className="border-r-gray-light col-span-1 row-span-full h-full border-r p-6">
+        <div className="min-h-[var(--spacing-header-height)]">
+          <Link to="/" className="flex items-center gap-3">
             <Image
               src={logoImage}
               layout="constrained"
@@ -53,71 +61,119 @@ function Home() {
               height={50}
               alt="Logo website"
             />
+            <Image
+              src={logoTitleImage}
+              layout="constrained"
+              width={80}
+              height={50}
+              alt="Logo website"
+            />
           </Link>
         </div>
         <nav className="">
-          <menu className="flex flex-col gap-2">
-            <li className="bg-background rounded-[15px] text-xs font-medium text-white">
-              <Link to="/" className="inline-block p-2.5">
-                Produits Similaires
+          <menu className="flex flex-col gap-1">
+            <li className="bg-background rounded-default text-xs font-medium text-white">
+              <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
+                <ExploreIcon className="size-5" />
+                Produits populaires
               </Link>
             </li>
-            <li className="text-foreground rounded-[15px] p-2 text-xs font-medium">
-              <Link to="/" className="inline-block p-2.5">
-                Produits Similaires
+            <li className="text-foreground rounded-default text-xs font-medium">
+              <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
+                <ExploreIcon className="size-5" />
+                Nouveautés
               </Link>
             </li>
-            <li className="text-foreground rounded-[15px] p-2 text-xs font-medium">
-              <Link to="/" className="inline-block p-2.5">
-                Produits Similaires
+            <li className="text-foreground rounded-default text-xs font-medium">
+              <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
+                <ExploreIcon className="size-5" />
+                Cadeaux
               </Link>
             </li>
-            <li className="text-foreground rounded-[15px] p-2 text-xs font-medium">
-              <Link to="/" className="inline-block p-2.5">
-                Produits Similaires
+            <li className="text-foreground rounded-default text-xs font-medium">
+              <Link to="/" className="flex items-center gap-2 px-5 py-3.5">
+                <ExploreIcon className="size-5" />
+                Inspiration
               </Link>
             </li>
           </menu>
         </nav>
-        <Separator className="text-muted-foreground my-6" />
-        <div>
-          <h3 className="mb-2 text-sm font-medium">Actions rapides</h3>
+        <Separator className="my-6" />
+        <section aria-labelledby="quick-actions">
+          <h3
+            id="quick-actions"
+            className="text-gray mb-1.5 pl-5 text-xs font-medium"
+          >
+            Actions rapides
+          </h3>
           <ul>
-            <li>Demander un produit</li>
-            <li>Demander un partenariat</li>
+            <li className="text-foreground rounded-default text-xs">
+              <Link
+                to="/"
+                className="hover:bg-background rounded-default flex items-center gap-2 px-5 py-2 hover:text-white"
+              >
+                <QuestionIcon className="size-4" />
+                Demander un produit
+              </Link>
+            </li>
+            <li className="text-foreground rounded-default text-xs">
+              <Link
+                to="/"
+                className="hover:bg-background rounded-default flex items-center gap-2 px-5 py-2 hover:text-white"
+              >
+                <QuestionIcon className="size-4" />
+                Demander un partenariat
+              </Link>
+            </li>
           </ul>
-        </div>
-        <Separator className="text-muted-foreground my-6" />
-        <div>
-          <h3 className="mb-2 text-sm font-medium">Dernières commandes</h3>
+        </section>
+        <Separator className="my-6" />
+        <section aria-labelledby="last-orders">
+          <h3
+            id="last-orders"
+            className="text-gray mb-1.5 pl-5 text-xs font-medium"
+          >
+            Dernières commandes
+          </h3>
           <ul>
-            <li>
-              Blabkla <Link to="/">voir</Link>
+            <li className="text-foreground rounded-default text-xs">
+              <Link
+                to="/"
+                className="hover:bg-tertiary rounded-default flex items-center gap-2 px-5 py-2"
+              >
+                <Image src={leaveImage} width={25} height={25} />
+                Token Cthulhu par 10000
+              </Link>
             </li>
-            <li>
-              Blabla <Link to="/">voir</Link>
+            <li className="text-foreground rounded-default text-xs">
+              <Link
+                to="/"
+                className="hover:bg-tertiary rounded-default e flex items-center gap-2 px-5 py-2"
+              >
+                <Image src={leaveImage} width={25} height={25} />
+                Token Cthulhu par 10000
+              </Link>
             </li>
-            <li></li>
-            <li></li>
           </ul>
           <Link
             to="/"
-            className="text-sm text-blue-600 hover:text-blue-800 hover:underline"
+            className="text-gray-dark mt-2 inline-block pl-5 text-xs font-medium hover:underline"
           >
             Voir tout
           </Link>
-        </div>
+        </section>
         <Link
           to="/"
-          className="inline-block pt-18 text-sm text-red-600 hover:text-red-800 hover:underline"
+          className="hover:bg-tertiary rounded-default mt-18 flex items-center gap-2 px-6 py-3 text-xs font-semibold"
         >
+          <Image src={leaveImage} width={30} height={30} />
           Se déconnecter
         </Link>
       </aside>
 
       {/* Header */}
-      <header className="relative col-span-5 row-span-3 flex flex-col border-b p-6">
-        <div className="after:bg-background flex h-[var(--spacing-header-height)] justify-between after:absolute after:-bottom-0.5 after:left-17 after:h-1 after:w-5 after:rounded-full after:content-['']">
+      <header className="border-b-gray-light relative col-span-5 row-span-3 flex flex-col border-b p-6">
+        <div className="after:bg-background flex min-h-[var(--spacing-header-height)] justify-between after:absolute after:-bottom-0.5 after:left-16 after:h-1 after:w-5 after:rounded-full after:content-['']">
           <section
             aria-labelledby="orders-heading"
             className="flex h-fit items-center gap-2"
@@ -151,48 +207,56 @@ function Home() {
           >
             {/* Cart */}
             <div className="relative">
-              <button
-                className="hover:bg-muted/80 flex h-8 w-8 items-center justify-center rounded-lg"
-                aria-label="Shopping cart with 3 items"
+              <Link
+                to="/"
+                className="bg-gray-light text-foreground rounded-default hover:bg-tertiary flex items-center gap-1.5 px-4 py-4 text-xs"
               >
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h8"
-                  />
-                </svg>
-              </button>
-              <div className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full text-xs font-medium text-white">
-                3
-              </div>
+                <CartIcon />
+                Panier
+              </Link>
+              <div className="bg-background absolute top-0.5 right-0.5 size-2.5 animate-pulse rounded-full"></div>
             </div>
 
             {/* User Profile */}
-            <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-pink-400 to-purple-500">
-                <span className="text-sm font-medium text-white">R</span>
+            <div className="hover:bg-tertiary rounded-default relative flex items-center gap-3 px-3 py-2">
+              <Link to="/" className="absolute inset-0 z-10"></Link>
+              <Image
+                src={profileImage}
+                layout="constrained"
+                width={30}
+                height={30}
+                alt="Logo website"
+              />
+              <div>
+                <p className="text-xs font-medium">Benjamin</p>
+                <p className="text-xs font-medium">Leproust</p>
               </div>
-              <span className="text-sm font-medium">Ryana</span>
             </div>
           </section>
         </div>
-        <div className="flex flex-1 justify-between">
+        <div className="flex flex-1 items-center justify-between">
           <h3 className="text-2xl font-medium">Découvre</h3>
           <div className="flex gap-1">
-            <Button className="rounded-full px-7 py-5">Hey</Button>
-            <Button className="rounded-full px-7 py-5">Hey</Button>
-            <Button className="rounded-full px-7 py-5">Hey</Button>
+            <Button className="text-foreground hover:bg-secondary bg-secondary flex items-center rounded-full">
+              <BuildingIcon />
+              Tout
+            </Button>
+            <Button className="text-gray hover:bg-secondary flex items-center rounded-full">
+              <BuildingIcon />
+              Cartes
+            </Button>
+            <Button className="text-gray hover:bg-secondary flex items-center rounded-full py-5">
+              <BuildingIcon />
+              Tokens
+            </Button>
           </div>
           <div className="flex gap-1">
-            <Button className="rounded-full px-7 py-5">Filtrer</Button>
-            <Button className="rounded-full px-7 py-5">Hey</Button>
+            <Button className="hover:bg-secondary rounded-full px-7 py-5">
+              Filtrer
+            </Button>
+            <Button size={"icon"} className="hover:bg-secondary">
+              <SearchIcon />
+            </Button>
           </div>
         </div>
       </header>
