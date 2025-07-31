@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default: "bg-gray-light text-foreground ",
       },
       size: {
-        default: "h-10 rounded-md px-6 py-[1.35rem]",
+        default: "h-10 rounded-2xl px-6 py-[1.35rem]",
         icon: "size-10 rounded-full",
       },
     },

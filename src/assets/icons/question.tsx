@@ -5,10 +5,10 @@ interface LogoProps {
 export const QuestionIcon = ({ className }: LogoProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="none"
+    fill="currentColor"
     viewBox="0 0 24 24"
     strokeWidth={1.5}
-    stroke="currentColor"
+    stroke="white"
     className={className}
   >
     <path

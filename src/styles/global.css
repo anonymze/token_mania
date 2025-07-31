@@ -51,6 +51,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-default: calc(var(--radius) + 10px);
+  --radius-bigger: calc(var(--radius) + 30px);
   --color-gray-light: var(--gray-light);
   --color-gray: var(--gray);
   --color-gray-dark: var(--gray-dark);

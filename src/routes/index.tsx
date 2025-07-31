@@ -4,9 +4,8 @@ import { CartIcon } from "@/assets/icons/cart";
 import { ExploreIcon } from "@/assets/icons/explore";
 import { QuestionIcon } from "@/assets/icons/question";
 import { SearchIcon } from "@/assets/icons/search";
-import leaveImage from "@/assets/images/leave.png";
 import logoImage from "@/assets/images/logo.png";
-import logoTitleImage from "@/assets/images/logo_title.png";
+import logoTitleImage from "@/assets/images/logo_title_3.png";
 import profileImage from "@/assets/images/profile.png";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -52,21 +51,15 @@ function Home() {
     <div className="grid h-full grid-cols-6 grid-rows-16">
       {/* Sidebar */}
       <aside className="border-r-gray-light col-span-1 row-span-full h-full border-r p-6">
-        <div className="min-h-[var(--spacing-header-height)]">
+        <div>
           <Link to="/" className="flex items-center gap-3">
             <Image
               src={logoImage}
               layout="constrained"
               width={60}
               height={50}
-              alt="Logo website"
-            />
-            <Image
-              src={logoTitleImage}
-              layout="constrained"
-              width={80}
-              height={50}
-              alt="Logo website"
+              alt="Logo Token Mania"
+              className="mx-auto"
             />
           </Link>
         </div>
@@ -141,7 +134,13 @@ function Home() {
                 to="/"
                 className="hover:bg-tertiary rounded-default flex items-center gap-2 px-5 py-2"
               >
-                <Image src={leaveImage} width={25} height={25} />
+                <Image
+                  src={logoImage}
+                  layout="constrained"
+                  width={25}
+                  height={25}
+                  alt=""
+                />
                 Token Cthulhu par 10000
               </Link>
             </li>
@@ -150,7 +149,13 @@ function Home() {
                 to="/"
                 className="hover:bg-tertiary rounded-default e flex items-center gap-2 px-5 py-2"
               >
-                <Image src={leaveImage} width={25} height={25} />
+                <Image
+                  src={logoImage}
+                  layout="constrained"
+                  width={25}
+                  height={25}
+                  alt=""
+                />
                 Token Cthulhu par 10000
               </Link>
             </li>
@@ -164,16 +169,22 @@ function Home() {
         </section>
         <Link
           to="/"
-          className="hover:bg-tertiary rounded-default mt-18 flex items-center gap-2 px-6 py-3 text-xs font-medium"
+          className="hover:bg-tertiary rounded-default mt-18 flex items-center gap-2 px-5 py-3 text-xs font-medium"
         >
-          <Image src={leaveImage} width={30} height={30} />
+          <Image
+            src={logoImage}
+            layout="constrained"
+            width={25}
+            height={25}
+            alt=""
+          />
           Se déconnecter
         </Link>
       </aside>
 
       {/* Header */}
       <header className="border-b-gray-light relative col-span-5 row-span-3 flex flex-col border-b p-6">
-        <div className="after:bg-background flex min-h-[var(--spacing-header-height)] justify-between after:absolute after:-bottom-0.5 after:left-16 after:h-1 after:w-5 after:rounded-full after:content-['']">
+        <div className="after:bg-background flex justify-between after:absolute after:-bottom-0.5 after:left-16 after:h-1 after:w-5 after:rounded-full after:content-['']">
           <section
             aria-labelledby="orders-heading"
             className="flex h-fit items-center gap-2"
@@ -200,6 +211,14 @@ function Home() {
               </time>
             </div>
           </section>
+
+          <Image
+            src={logoTitleImage}
+            layout="constrained"
+            width={90}
+            height={90}
+            alt="Logo titre Token Mania"
+          />
 
           <section
             aria-label="User actions"
