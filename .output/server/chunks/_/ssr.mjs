@@ -3231,9 +3231,9 @@ async function loadVirtualModule(id) {
     case VIRTUAL_MODULES.routeTree:
       return await Promise.resolve().then(() => routeTree_gen);
     case VIRTUAL_MODULES.startManifest:
-      return await import('./_tanstack-start-manifest_v-C66_WfoE.mjs');
+      return await import('./_tanstack-start-manifest_v-CMtBRgei.mjs');
     case VIRTUAL_MODULES.serverFnManifest:
-      return await import('./_tanstack-start-server-fn-manifest_v-CDJdrrnw.mjs');
+      return await import('./_tanstack-start-server-fn-manifest_v-Bpd1KUB_.mjs');
     default:
       throw new Error(`Unknown virtual module: ${id}`);
   }
@@ -3721,6 +3721,7 @@ function isSpecialResponse(err) {
 function isResponse(response) {
   return response instanceof Response;
 }
+const appCss = "/assets/global-ByDdQ86E.css";
 const Route$1 = createRootRoute({
   head: () => ({
     meta: [{
@@ -3730,6 +3731,10 @@ const Route$1 = createRootRoute({
       content: "width=device-width, initial-scale=1"
     }, {
       title: "TanStack Start Starter"
+    }],
+    links: [{
+      rel: "stylesheet",
+      href: appCss
     }]
   }),
   component: RootComponent
@@ -3762,7 +3767,7 @@ const createServerRpc = (functionId, serverBase, splitImportFn) => {
     functionId
   });
 };
-const $$splitComponentImporter = () => import('./index-Dvq56ap-.mjs');
+const $$splitComponentImporter = () => import('./index-p8Z0x3tJ.mjs');
 const filePath = "count.txt";
 async function readCount() {
   console.log("readCount");

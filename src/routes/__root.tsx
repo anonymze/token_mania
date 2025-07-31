@@ -21,10 +21,47 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStack Start Starter",
+        title: "Token Mania",
       },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      {
+        rel: "preload",
+        href: "/fonts/inter-v19-latin-300.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossorigin: true,
+      },
+      {
+        rel: "preload",
+        href: "/fonts/inter-v19-latin-400.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossorigin: true,
+      },
+      {
+        rel: "preload",
+        href: "/fonts/inter-v19-latin-500.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossorigin: true,
+      },
+      {
+        rel: "preload",
+        href: "/fonts/inter-v19-latin-600.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossorigin: true,
+      },
+      {
+        rel: "preload",
+        href: "/fonts/inter-v19-latin-700.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossorigin: true,
+      },
+      { rel: "stylesheet", href: appCss },
+    ],
   }),
   component: RootComponent,
 });
@@ -43,7 +80,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="h-dvh">
         {children}
         <Scripts />
       </body>
