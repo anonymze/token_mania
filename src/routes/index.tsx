@@ -50,7 +50,7 @@ function Home() {
     <div className="grid h-full grid-cols-6 grid-rows-16">
       {/* Sidebar */}
       <aside className="border-r-gray-light col-span-1 row-span-full grid grid-rows-16 border-r p-6">
-        <Link to="/" className="row-span-2 flex items-center gap-3">
+        <Link to="/" className="row-span-2">
           <Image
             src={logoImage}
             layout="constrained"
@@ -192,7 +192,7 @@ function Home() {
           </data>
           <Separator
             orientation="vertical"
-            className="data-[orientation=vertical]:h-3.5"
+            className="data-[orientation=vertical]:h-4"
           />
           <div className="flex flex-col justify-center">
             <h2 id="orders-heading" className="text-xs leading-3.5 font-medium">
@@ -232,7 +232,7 @@ function Home() {
           </div>
 
           {/* User Profile */}
-          <div className="hover:bg-tertiary rounded-default relative flex items-center gap-3 px-3 py-2">
+          <div className="hover:bg-tertiary rounded-default relative flex items-center gap-3 px-4 py-2">
             <Link to="/" className="absolute inset-0 z-10"></Link>
             <Image
               src={profileImage}
