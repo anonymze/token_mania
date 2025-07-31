@@ -46,6 +46,7 @@ stats.html
 .tsup
 .vinxi
 .output
+.tanstack
 temp
 
 vite.config.js.timestamp-*
