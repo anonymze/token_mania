@@ -4,7 +4,9 @@ import { CartIcon } from "@/assets/icons/cart";
 import { ExploreIcon } from "@/assets/icons/explore";
 import { QuestionIcon } from "@/assets/icons/question";
 import { SearchIcon } from "@/assets/icons/search";
+import leaveImage from "@/assets/images/leave.png";
 import logoImage from "@/assets/images/logo.png";
+import logoTitleImage from "@/assets/images/logo_title_3.png";
 import profileImage from "@/assets/images/profile.png";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -47,21 +49,21 @@ function Home() {
   const state = Route.useLoaderData();
 
   return (
-    <div className="grid h-full grid-cols-6 grid-rows-16">
+    <div className="grid h-full grid-cols-6 grid-rows-20">
       {/* Sidebar */}
-      <aside className="border-r-gray-light col-span-1 row-span-full grid grid-rows-16 border-r p-6">
-        <Link to="/" className="row-span-2">
+      <aside className="border-r-gray-light col-span-1 row-span-full grid grid-rows-20 border-r p-6">
+        <Link to="/" className="row-span-2 gap-3">
           <Image
             src={logoImage}
             layout="constrained"
-            width={70}
-            height={70}
+            width={60}
+            height={60}
             alt="Logo Token Mania"
             className="mx-auto"
           />
         </Link>
 
-        <div className="row-span-14 flex flex-col">
+        <div className="row-span-17 flex flex-col">
           <nav>
             <menu className="flex flex-col gap-1">
               <li className="bg-background rounded-default text-xs font-medium text-white">
@@ -166,13 +168,13 @@ function Home() {
           </section>
           <Link
             to="/"
-            className="hover:bg-tertiary rounded-default mt-auto flex items-center gap-2 px-5 py-3 text-xs font-medium"
+            className="hover:bg-tertiary rounded-default mt-auto flex items-center gap-2 px-4 py-2.5 text-xs font-medium"
           >
             <Image
-              src={logoImage}
+              src={leaveImage}
               layout="constrained"
-              width={25}
-              height={25}
+              width={35}
+              height={35}
               alt=""
               className="mt-auto"
             />
@@ -192,7 +194,7 @@ function Home() {
           </data>
           <Separator
             orientation="vertical"
-            className="data-[orientation=vertical]:h-4"
+            className="bg-gray data-[orientation=vertical]:h-3.5"
           />
           <div className="flex flex-col justify-center">
             <h2 id="orders-heading" className="text-xs leading-3.5 font-medium">
@@ -207,13 +209,13 @@ function Home() {
           </div>
         </section>
 
-        {/*<Image
+        <Image
           src={logoTitleImage}
           layout="fixed"
           width={100}
-          height={30}
+          height={40}
           alt="Logo titre Token Mania"
-        />*/}
+        />
 
         <section
           aria-label="User actions"
@@ -232,14 +234,14 @@ function Home() {
           </div>
 
           {/* User Profile */}
-          <div className="hover:bg-tertiary rounded-default relative flex items-center gap-3 px-4 py-2">
+          <div className="hover:bg-tertiary rounded-default relative flex items-center gap-3 px-4 py-1.5">
             <Link to="/" className="absolute inset-0 z-10"></Link>
             <Image
               src={profileImage}
               layout="constrained"
-              width={30}
-              height={30}
-              alt="Logo website"
+              width={35}
+              height={35}
+              alt="Profile Benjamin Leproust"
             />
             <div>
               <p className="text-xs font-medium">Benjamin</p>
