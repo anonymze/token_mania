@@ -90,8 +90,8 @@
 }
 
 :root {
-  --gray-light: oklch(0.9761 0 0);
-  --gray: oklch(0.696 0 0);
+  --gray-light: oklch(0.9561 0 0);
+  --gray: oklch(0.676 0 0);
   --gray-dark: oklch(0.5138 0 0);
   --radius: 0.625rem;
   --background: oklch(0.5534 0.2281 264.97);

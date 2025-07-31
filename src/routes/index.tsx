@@ -164,7 +164,7 @@ function Home() {
         </section>
         <Link
           to="/"
-          className="hover:bg-tertiary rounded-default mt-18 flex items-center gap-2 px-6 py-3 text-xs font-semibold"
+          className="hover:bg-tertiary rounded-default mt-18 flex items-center gap-2 px-6 py-3 text-xs font-medium"
         >
           <Image src={leaveImage} width={30} height={30} />
           Se déconnecter
@@ -183,7 +183,7 @@ function Home() {
             </data>
             <Separator
               orientation="vertical"
-              className="data-[orientation=vertical]:h-3"
+              className="data-[orientation=vertical]:h-3.5"
             />
             <div className="flex flex-col justify-center">
               <h2
@@ -236,7 +236,7 @@ function Home() {
         </div>
         <div className="flex flex-1 items-center justify-between">
           <h3 className="text-2xl font-medium">Découvre</h3>
-          <div className="flex gap-1">
+          <div className="flex gap-1.5">
             <Button className="text-foreground hover:bg-secondary bg-secondary flex items-center rounded-full">
               <BuildingIcon />
               Tout
@@ -250,7 +250,7 @@ function Home() {
               Tokens
             </Button>
           </div>
-          <div className="flex gap-1">
+          <div className="flex gap-1.5">
             <Button className="hover:bg-secondary rounded-full px-7 py-5">
               Filtrer
             </Button>
