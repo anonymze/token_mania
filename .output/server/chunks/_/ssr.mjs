@@ -1595,7 +1595,7 @@ function Ce(o, e) {
 var { toString: _e } = Object.prototype;
 function Er(o, e) {
   return e instanceof Error ? `Seroval caught an error during the ${o} process.
-  
+
 ${e.name}
 ${e.message}
 
@@ -1622,7 +1622,7 @@ var ee$1 = class ee extends Error {
 }, g = class extends Error {
   constructor(r) {
     super(`The value ${_e.call(r)} of type "${typeof r}" cannot be parsed/serialized.
-      
+
 There are few workarounds for this problem:
 - Transform the value in a way that it can be serialized.
 - If the reference is present on multiple runtimes (isomorphic), you can use the Reference API to map the references.`);
@@ -3231,9 +3231,9 @@ async function loadVirtualModule(id) {
     case VIRTUAL_MODULES.routeTree:
       return await Promise.resolve().then(() => routeTree_gen);
     case VIRTUAL_MODULES.startManifest:
-      return await import('./_tanstack-start-manifest_v-CMtBRgei.mjs');
+      return await import('./_tanstack-start-manifest_v-OKcYHptY.mjs');
     case VIRTUAL_MODULES.serverFnManifest:
-      return await import('./_tanstack-start-server-fn-manifest_v-Bpd1KUB_.mjs');
+      return await import('./_tanstack-start-server-fn-manifest_v-et47vUk7.mjs');
     default:
       throw new Error(`Unknown virtual module: ${id}`);
   }
@@ -3721,7 +3721,7 @@ function isSpecialResponse(err) {
 function isResponse(response) {
   return response instanceof Response;
 }
-const appCss = "/assets/global-ByDdQ86E.css";
+const appCss = "/assets/global-mm29NARg.css";
 const Route$1 = createRootRoute({
   head: () => ({
     meta: [{
@@ -3730,9 +3730,39 @@ const Route$1 = createRootRoute({
       name: "viewport",
       content: "width=device-width, initial-scale=1"
     }, {
-      title: "TanStack Start Starter"
+      title: "Token Mania"
     }],
     links: [{
+      rel: "preload",
+      href: "/fonts/inter-v19-latin-300.woff2",
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: true
+    }, {
+      rel: "preload",
+      href: "/fonts/inter-v19-latin-400.woff2",
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: true
+    }, {
+      rel: "preload",
+      href: "/fonts/inter-v19-latin-500.woff2",
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: true
+    }, {
+      rel: "preload",
+      href: "/fonts/inter-v19-latin-600.woff2",
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: true
+    }, {
+      rel: "preload",
+      href: "/fonts/inter-v19-latin-700.woff2",
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: true
+    }, {
       rel: "stylesheet",
       href: appCss
     }]
@@ -3747,7 +3777,7 @@ function RootDocument({
 }) {
   return /* @__PURE__ */ jsxs("html", { children: [
     /* @__PURE__ */ jsx("head", { children: /* @__PURE__ */ jsx(HeadContent, {}) }),
-    /* @__PURE__ */ jsxs("body", { children: [
+    /* @__PURE__ */ jsxs("body", { className: "h-dvh", children: [
       children,
       /* @__PURE__ */ jsx(Scripts, {})
     ] })
@@ -3767,7 +3797,7 @@ const createServerRpc = (functionId, serverBase, splitImportFn) => {
     functionId
   });
 };
-const $$splitComponentImporter = () => import('./index-p8Z0x3tJ.mjs');
+const $$splitComponentImporter = () => import('./index-CSuuKP_Y.mjs');
 const filePath = "count.txt";
 async function readCount() {
   console.log("readCount");
@@ -3781,6 +3811,18 @@ const getCount = createServerFn({
 }).handler(getCount_createServerFn_handler, () => {
   console.log("getCount");
   return readCount();
+});
+const updateCount_createServerFn_handler = createServerRpc("src_routes_index_tsx--updateCount_createServerFn_handler", "/_serverFn", (opts, signal) => {
+  return updateCount.__executeServer(opts, signal);
+});
+const updateCount = createServerFn({
+  method: "POST"
+}).validator((d2) => d2).handler(updateCount_createServerFn_handler, async ({
+  data
+}) => {
+  console.log("updateCount");
+  const count = await readCount();
+  await fs.promises.writeFile(filePath, `${count + data}`);
 });
 const Route = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter, "component"),
@@ -3814,5 +3856,5 @@ const serverEntry = defineEventHandler(function(event) {
   return serverEntry$1({ request });
 });
 
-export { Route as R, createServerRpc as a, createServerFn as c, serverEntry as default };
+export { Route as R, createServerFn as a, createServerRpc as c, serverEntry as default };
 //# sourceMappingURL=ssr.mjs.map

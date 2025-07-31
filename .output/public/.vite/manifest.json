@@ -1,6 +1,6 @@
 {
   "../../../../../~start/default-client-entry.tsx": {
-    "file": "assets/main-C_EqFwFC.js",
+    "file": "assets/main-B6uI-ydp.js",
     "name": "main",
     "src": "../../../../../~start/default-client-entry.tsx",
     "isEntry": true,
@@ -8,15 +8,15 @@
       "src/routes/index.tsx?tsr-split=component"
     ],
     "assets": [
-      "assets/global-ByDdQ86E.css"
+      "assets/global-D1RPvm-b.css"
     ]
   },
   "/Users/ano/dev/perso/token_mania/src/styles/global.css": {
-    "file": "assets/global-ByDdQ86E.css",
+    "file": "assets/global-D1RPvm-b.css",
     "src": "/Users/ano/dev/perso/token_mania/src/styles/global.css"
   },
   "src/routes/index.tsx?tsr-split=component": {
-    "file": "assets/index-DHWhSK-c.js",
+    "file": "assets/index-BZbUiTx_.js",
     "name": "index",
     "src": "src/routes/index.tsx?tsr-split=component",
     "isDynamicEntry": true,

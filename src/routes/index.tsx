@@ -1,4 +1,5 @@
 // src/routes/index.tsx
+import logoImage from "@/assets/images/logo_2.png";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
@@ -40,33 +41,41 @@ function Home() {
   const state = Route.useLoaderData();
 
   return (
-    <div className="grid h-full grid-cols-6 grid-rows-9">
+    <div className="grid h-full grid-cols-6 grid-rows-16">
       {/* Sidebar */}
-      <aside className="border-border col-span-1 row-span-full h-full border-r bg-red-200 p-6">
-        <div className="h-[var(--spacing-header-height)] bg-red-300">
+      <aside className="border-border col-span-1 row-span-full h-full border-r p-6">
+        <div className="h-[var(--spacing-header-height)]">
           <Link to="/" className="group flex items-center gap-3">
             <Image
-              src="https://cdn.shopify.com/static/sample-images/bath.jpeg"
+              src={logoImage}
               layout="constrained"
-              width={100}
-              height={100}
-              alt="A lovely bath"
+              width={60}
+              height={50}
+              alt="Logo website"
             />
           </Link>
         </div>
-        <nav className="bg-amber-500">
+        <nav className="">
           <menu className="flex flex-col gap-2">
-            <li className="bg-background rounded-[15px] p-2 text-sm font-medium text-white">
-              Produits populaires
+            <li className="bg-background rounded-[15px] text-xs font-medium text-white">
+              <Link to="/" className="inline-block p-2.5">
+                Produits Similaires
+              </Link>
             </li>
-            <li className="text-foreground rounded-[15px] p-2 text-sm font-medium">
-              Nouveaux produits
+            <li className="text-foreground rounded-[15px] p-2 text-xs font-medium">
+              <Link to="/" className="inline-block p-2.5">
+                Produits Similaires
+              </Link>
             </li>
-            <li className="text-foreground rounded-[15px] p-2 text-sm font-medium">
-              Nouveaux produits
+            <li className="text-foreground rounded-[15px] p-2 text-xs font-medium">
+              <Link to="/" className="inline-block p-2.5">
+                Produits Similaires
+              </Link>
             </li>
-            <li className="text-foreground rounded-[15px] p-2 text-sm font-medium">
-              Nouveaux produits
+            <li className="text-foreground rounded-[15px] p-2 text-xs font-medium">
+              <Link to="/" className="inline-block p-2.5">
+                Produits Similaires
+              </Link>
             </li>
           </menu>
         </nav>
@@ -107,8 +116,8 @@ function Home() {
       </aside>
 
       {/* Header */}
-      <header className="relative col-span-5 row-span-2 flex flex-col border-b bg-blue-200 p-6">
-        <div className="after:bg-background flex h-[var(--spacing-header-height)] justify-between bg-purple-500 after:absolute after:-bottom-0.5 after:left-17 after:h-1 after:w-5 after:rounded-full after:content-['']">
+      <header className="relative col-span-5 row-span-3 flex flex-col border-b p-6">
+        <div className="after:bg-background flex h-[var(--spacing-header-height)] justify-between after:absolute after:-bottom-0.5 after:left-17 after:h-1 after:w-5 after:rounded-full after:content-['']">
           <section
             aria-labelledby="orders-heading"
             className="flex h-fit items-center gap-2"
@@ -118,7 +127,7 @@ function Home() {
             </data>
             <Separator
               orientation="vertical"
-              className="bg-muted-foreground data-[orientation=vertical]:h-3"
+              className="data-[orientation=vertical]:h-3"
             />
             <div className="flex flex-col justify-center">
               <h2
@@ -143,7 +152,7 @@ function Home() {
             {/* Cart */}
             <div className="relative">
               <button
-                className="bg-muted hover:bg-muted/80 flex h-8 w-8 items-center justify-center rounded-lg"
+                className="hover:bg-muted/80 flex h-8 w-8 items-center justify-center rounded-lg"
                 aria-label="Shopping cart with 3 items"
               >
                 <svg
@@ -160,7 +169,7 @@ function Home() {
                   />
                 </svg>
               </button>
-              <div className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs font-medium text-white">
+              <div className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full text-xs font-medium text-white">
                 3
               </div>
             </div>
@@ -174,7 +183,7 @@ function Home() {
             </div>
           </section>
         </div>
-        <div className="flex flex-1 justify-between bg-pink-200">
+        <div className="flex flex-1 justify-between">
           <h3 className="text-2xl font-medium">Découvre</h3>
           <div className="flex gap-1">
             <Button className="rounded-full px-7 py-5">Hey</Button>
@@ -189,7 +198,7 @@ function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="col-span-5 row-span-9 bg-green-200 p-6"></main>
+      <main className="col-span-5 row-span-13 p-6"></main>
     </div>
   );
 }

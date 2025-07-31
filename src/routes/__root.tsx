@@ -27,13 +27,6 @@ export const Route = createRootRoute({
     links: [
       {
         rel: "preload",
-        href: "/fonts/inter-v19-latin-300.woff2",
-        as: "font",
-        type: "font/woff2",
-        crossorigin: true,
-      },
-      {
-        rel: "preload",
         href: "/fonts/inter-v19-latin-400.woff2",
         as: "font",
         type: "font/woff2",
