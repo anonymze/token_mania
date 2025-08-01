@@ -211,8 +211,8 @@ function Home() {
 
         <Image
           src={logoTitleImage}
-          layout="fixed"
-          width={100}
+          layout="constrained"
+          width={80}
           height={40}
           alt="Logo titre Token Mania"
         />
