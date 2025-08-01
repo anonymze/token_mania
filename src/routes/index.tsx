@@ -184,7 +184,7 @@ function Home() {
       </aside>
 
       {/* Header */}
-      <header className="col-span-5 row-span-2 flex justify-between p-6">
+      <header className="col-span-5 row-span-2 flex justify-between px-6 pt-6">
         <section
           aria-labelledby="orders-heading"
           className="flex h-fit items-center gap-2"
@@ -215,7 +215,7 @@ function Home() {
           width={80}
           height={40}
           alt="Logo titre Token Mania"
-          className="object-contain"
+          className="mb-auto object-contain"
         />
 
         <section
@@ -240,8 +240,8 @@ function Home() {
             <Image
               src={profileImage}
               layout="constrained"
-              width={35}
-              height={35}
+              width={34}
+              height={34}
               alt="Profile Benjamin Leproust"
             />
             <div>
