@@ -215,6 +215,7 @@ function Home() {
           width={80}
           height={40}
           alt="Logo titre Token Mania"
+          className="object-contain"
         />
 
         <section
