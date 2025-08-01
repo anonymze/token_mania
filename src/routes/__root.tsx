@@ -8,6 +8,8 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import Header from "@/layouts/header";
+import Sidebar from "@/layouts/sidebar";
 import appCss from "@/styles/global.css?url";
 
 export const Route = createRootRoute({
@@ -24,37 +26,7 @@ export const Route = createRootRoute({
         title: "Token Mania",
       },
     ],
-    links: [
-      {
-        rel: "preload",
-        href: "/fonts/inter-v19-latin-400.woff2",
-        as: "font",
-        type: "font/woff2",
-        crossorigin: true,
-      },
-      {
-        rel: "preload",
-        href: "/fonts/inter-v19-latin-500.woff2",
-        as: "font",
-        type: "font/woff2",
-        crossorigin: true,
-      },
-      {
-        rel: "preload",
-        href: "/fonts/inter-v19-latin-600.woff2",
-        as: "font",
-        type: "font/woff2",
-        crossorigin: true,
-      },
-      {
-        rel: "preload",
-        href: "/fonts/inter-v19-latin-700.woff2",
-        as: "font",
-        type: "font/woff2",
-        crossorigin: true,
-      },
-      { rel: "stylesheet", href: appCss },
-    ],
+    links: links,
   }),
   component: RootComponent,
 });
@@ -73,10 +45,46 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body className="h-dvh">
-        {children}
+      <body>
+        <div className="grid h-dvh grid-cols-6 grid-rows-20">
+          <Sidebar />
+          <Header />
+          {children}
+        </div>
         <Scripts />
       </body>
     </html>
   );
 }
+
+const links = [
+  {
+    rel: "preload",
+    href: "/fonts/inter-v19-latin-400.woff2",
+    as: "font",
+    type: "font/woff2",
+    crossorigin: true,
+  },
+  {
+    rel: "preload",
+    href: "/fonts/inter-v19-latin-500.woff2",
+    as: "font",
+    type: "font/woff2",
+    crossorigin: true,
+  },
+  {
+    rel: "preload",
+    href: "/fonts/inter-v19-latin-600.woff2",
+    as: "font",
+    type: "font/woff2",
+    crossorigin: true,
+  },
+  {
+    rel: "preload",
+    href: "/fonts/inter-v19-latin-700.woff2",
+    as: "font",
+    type: "font/woff2",
+    crossorigin: true,
+  },
+  { rel: "stylesheet", href: appCss },
+];
