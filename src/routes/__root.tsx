@@ -45,12 +45,10 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body>
-        <div className="grid h-dvh grid-cols-6 grid-rows-20">
-          <Sidebar />
-          <Header />
-          {children}
-        </div>
+      <body className="grid h-dvh grid-cols-6 grid-rows-20">
+        <Sidebar />
+        <Header />
+        {children}
         <Scripts />
       </body>
     </html>
