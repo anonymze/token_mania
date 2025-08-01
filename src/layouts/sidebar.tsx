@@ -126,7 +126,7 @@ export default function Sidebar() {
         </section>
         <Link
           to="/"
-          className="hover:bg-tertiary rounded-default mt-auto flex items-center gap-2 px-4 py-2.5 text-xs font-medium"
+          className="hover:bg-tertiary rounded-default mt-auto flex items-center gap-2 px-4 py-2 text-xs font-medium"
         >
           <Image
             src={leaveImage}
