@@ -1,6 +1,7 @@
 // src/routes/index.tsx
 import { BuildingIcon } from "@/assets/icons/building";
 import { SearchIcon } from "@/assets/icons/search";
+import { PromotionCard } from "@/components/PromotionCard";
 import { Button } from "@/components/ui/button";
 import { createFileRoute, useRouter } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
@@ -71,7 +72,31 @@ function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="col-span-5 row-span-12 p-6"></main>
+      <main className="col-span-5 row-span-12 p-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <PromotionCard
+            id="winter-discount"
+            title="GET UP TO 50% OFF"
+            description="Get Discount"
+            image="/api/placeholder/150/150"
+            backgroundColor="#a8e6a3"
+            ctaText="Shop Now"
+            ctaLink="/shop/winter-sale"
+            className="md:col-span-2"
+          />
+
+          <PromotionCard
+            id="winter-weekend"
+            title="Winter's weekend"
+            description="keep it casual"
+            image="/api/placeholder/150/150"
+            backgroundColor="#f4d03f"
+            ctaText="Explore"
+            ctaLink="/collections/weekend"
+            className="md:col-span-1"
+          />
+        </div>
+      </main>
     </>
   );
 }
